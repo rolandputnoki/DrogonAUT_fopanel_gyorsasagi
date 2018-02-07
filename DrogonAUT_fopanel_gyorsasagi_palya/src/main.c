@@ -529,7 +529,7 @@ void ciklus(){
 
 				}
 */
-
+/*
 				sebesseg_szabalyzas_on = 0;
 
 				if(!fekezek_a_safty_elott)
@@ -547,7 +547,19 @@ void ciklus(){
 						state_of_robot = SAFTY_CAR_KOVETES;
 					}
 				}
+*/
 
+
+				wanted_speed = (elulso_sharp_szenzor - 450)*0.00057f;
+				if(elulso_sharp_szenzor <= 600)
+				{
+					wanted_speed = 0.0f;
+				}
+
+				if(speed_of_drogon <= 0.0f)
+				{
+					state_of_robot = SAFTY_CAR_KOVETES;
+				}
 
 
 				break;
@@ -1055,6 +1067,8 @@ uint8_t fekez()
 
 void safty_car_tavolsag_szabalyozas()
 {
+
+	/*
 	tav_mostani_hiba = elulso_sharp_szenzor - tav_set_value;
 	tav_szab_d_tag = tav_mostani_hiba - tav_elozo_hiba;
 
@@ -1082,7 +1096,13 @@ void safty_car_tavolsag_szabalyozas()
 		wanted_speed = 1.5f;
 	}
 
+*/
 
+	wanted_speed = (elulso_sharp_szenzor - 450)*0.0008f;
+	if(elulso_sharp_szenzor <= 600)
+	{
+		wanted_speed = 0.0f;
+	}
 
 
 }
