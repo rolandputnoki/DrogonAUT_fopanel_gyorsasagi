@@ -14,7 +14,21 @@
 #define KD_lassu 900
 
 //#define HIGH_SPEED 1.7f
-#define HIGH_SPEED 2.0f;
-#define LOW_SPEED 0.7f
+
+
+
+#define HIGH_SPEED_1 1.4f;
+#define LOW_SPEED_1 0.7f
+
+
+#define HIGH_SPEED_2 1.6f;
+#define LOW_SPEED_2 0.7f
+
+#define HIGH_SPEED_3 2.0f;
+#define LOW_SPEED_3 0.7f
+
+#define TAV_SZAB_KP 0.0008f
+#define TAV_SZAB_KD 0.010f
+
 
 #endif /* GYORSASAGI_PARAMETEREK_H_ */

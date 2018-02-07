@@ -56,7 +56,10 @@ typedef enum {
 	START = 1,
 	GYORSASAGI_SZAKASZ = 2,
 	LASSITAS = 3,
-	KANYAR = 4
+	KANYAR = 4,
+	SAFTY_CAR_KOVETES = 5,
+	GYORSASAGI_INDULAS = 6,
+	GYOZELEM = 7
 
 } Robot_state;
 
