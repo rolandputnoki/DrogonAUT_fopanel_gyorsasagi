@@ -22,6 +22,18 @@ extern uint8_t fek_megvartuk_a_kozepet = 0;
 /***********************************/
 
 
+
+/***********************************/
+/*Lassit */
+extern uint16_t lassit_kozep_ido_milisec = 0;
+extern uint16_t lassit_hatra_ido_milisec = 0;
+extern uint8_t lassit_varjuk_meg_a_kozep_erteket = 0;
+extern uint8_t lassit_varjuk_meg_a_hatra_erteket = 0;
+extern uint8_t lassit_megvartuk_a_hatrat = 0;
+extern uint8_t lassit_megvartuk_a_kozepet = 0;
+/***********************************/
+
+
 /***********************************/
 /* Fekezes utáni várakozás*/
 extern uint16_t fek_varakozasi_ido = 0;
@@ -200,6 +212,23 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *handle)
 			if(fek_megvartuk_a_hatrat){
 				fek_hatra_ido_milisec = 0;
 				fek_varjuk_meg_a_hatra_erteket = 0;
+			}
+		}
+
+
+		if(lassit_varjuk_meg_a_kozep_erteket){
+			lassit_kozep_ido_milisec++;
+			if(lassit_megvartuk_a_kozepet){
+				lassit_kozep_ido_milisec = 0;
+				lassit_varjuk_meg_a_kozep_erteket = 0;
+			}
+		}
+
+		if(lassit_varjuk_meg_a_hatra_erteket){
+			lassit_hatra_ido_milisec++;
+			if(lassit_megvartuk_a_hatrat){
+				lassit_hatra_ido_milisec = 0;
+				lassit_varjuk_meg_a_hatra_erteket = 0;
 			}
 		}
 

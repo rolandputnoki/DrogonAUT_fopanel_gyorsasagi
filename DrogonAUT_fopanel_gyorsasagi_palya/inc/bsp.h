@@ -37,6 +37,7 @@ void jelzes_felismeres(uint8_t);
 void kereszt_vonal_felismeres(uint8_t);
 void konvoj_elhaladas_felismeres();
 uint8_t fekez();
+uint8_t lassit();
 
 extern uint8_t new_cycle;
 
@@ -80,6 +81,17 @@ uint8_t fek_varjuk_meg_a_kozep_erteket;
 uint8_t fek_varjuk_meg_a_hatra_erteket;
 uint8_t fek_megvartuk_a_hatrat;
 uint8_t fek_megvartuk_a_kozepet;
+/***********************************/
+
+
+/***********************************/
+/* Lassitas */
+uint16_t lassit_kozep_ido_milisec;
+uint16_t lassit_hatra_ido_milisec;
+uint8_t lassit_varjuk_meg_a_kozep_erteket;
+uint8_t lassit_varjuk_meg_a_hatra_erteket;
+uint8_t lassit_megvartuk_a_hatrat;
+uint8_t lassit_megvartuk_a_kozepet;
 /***********************************/
 
 

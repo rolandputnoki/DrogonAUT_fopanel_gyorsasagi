@@ -18,17 +18,22 @@
 
 
 #define HIGH_SPEED_1 1.4f;
-#define LOW_SPEED_1 0.7f
+#define LOW_SPEED_1 0.9f
 
 
 #define HIGH_SPEED_2 1.6f;
-#define LOW_SPEED_2 0.7f
+#define LOW_SPEED_2 0.8f
 
 #define HIGH_SPEED_3 2.0f;
-#define LOW_SPEED_3 0.7f
+#define LOW_SPEED_3 0.8f
 
 #define TAV_SZAB_KP 0.0008f
 #define TAV_SZAB_KD 0.010f
+
+
+#define FEKTAV_1 1900
+#define FEKTAV_2 1800
+#define FEKTAV_3 1700
 
 
 #endif /* GYORSASAGI_PARAMETEREK_H_ */
